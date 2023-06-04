@@ -2,8 +2,7 @@ import { OrbitControls, Sky } from '@react-three/drei'
 import { BlendFunction, GlitchMode } from 'postprocessing'
 import { useControls } from 'leva';
 import { useRef } from 'react';
-
-
+import Sphere from '../components/Sphere';
 
 
 export default function App()
@@ -15,10 +14,7 @@ export default function App()
         <ambientLight/>
         <directionalLight position={[ 1,1,1 ]} />
 
-        <mesh castShadow position-x={ - 2 }>
-            <sphereGeometry />
-            <meshStandardMaterial color="orange" />
-        </mesh>
+        <Sphere position-x={5} position-y={2} color="red" />
 
         <mesh>
             <boxGeometry/>
